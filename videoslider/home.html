@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<head>
+    <title>video slider</title>
+    <link rel="stylesheet" href="home.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+</head>
+
+<body>
+    <section>
+
+        
+        <div class="video" id="slideshow">
+
+            <video id="active" src="images/dubai.mp4" autoplay muted loop></video>
+            <video src="images/mumbai.mp4" autoplay muted loop></video>
+            <video src="images/eiffel.mp4" autoplay muted loop></video>
+            <video src="images/Alaska.mp4" autoplay muted loop></video>
+            <video src="images/london.mp4" autoplay muted loop></video>
+
+        </div>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="check-btn">
+                <i  class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+            <h1><a href="#">World</a></h1>
+            <ul>
+                <li><a href="#"class="active">Home</a></li>
+                <li><a href="#">Destination</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+
+
+            </ul>
+        </nav>
+
+        <div id="text">
+            <div id="slidetext">
+                <div>
+                    <h2>Dubai</h2>
+                    <p>famous for sightseeing skyscrappers such as the Burj Khalifa (the world's tallest building),Burj
+                        Al Arab (world's first 7star hotel),artificial islands(Palm jumeirah) and
+                        shopping malls that come complete with mammoth aquariums and indoor ski slopes.</p>
+                </div>
+                <div>
+                    <h2>Mumbai</h2>
+                    <p> it's India's largest city,A financial center.Famous for Monuments & Iconic structures
+                        Gateway of India.
+                        Taj Mahal Hotel.The city is one of the world's top centers of commerce in terms of financial
+                        flow. </p>
+                </div>
+                <div>
+                    <h2>Paris</h2>
+                    <p>The French capital is one of the most romantic cities in Europe and one of the world's most
+                        visited cities.
+                        City of Light. its best-known monument, is the unique Eiffel Tower </p>
+                </div>
+                <div>
+                    <h2>Alaska</h2>
+                    <p>Alaska is famous for glaciers and fjords, mountains, and more lakes, rivers, and waterways than
+                        one could dream of.
+                        There are more than 3,000 rivers and 3,000,000 lakes and about 100,000 glaciers in Alaska
+                    </p>
+                </div>
+                <div>
+                    <h2>London</h2>
+                    <p>London is famous for more than its magnificent ancient buildings, the Palace of Westminster,
+                        Trafalgar Square, Tower of London, London Eye, Art Galleries, and Big Ben.
+                        London is the smallest city in England but,One of the world's most visited cities</p>
+                </div>
+            </div>
+        </div>
+        
+        <ul class="sci">
+            <li><a href="#"><img src="images/facebook.png"></a></li>
+            <li><a href="#"><img src="images/twitter.png"></a></li>
+            <li><a href="#"><img src="images/instagram.png"></a></li>
+        </ul>
+        
+        </div>
+        <div class="indicator">
+            <span id="btn1" class="active"></span>
+            <span id="btn2"></span>
+            <span id="btn3"></span>
+            <span id="btn4"></span>
+            <span id="btn5"></span>
+            <div>
+    </section>
+
+
+
+    <script>
+        var slide = document.getElementById('slideshow');
+        var slidetext = document.getElementById('slidetext');
+        var btn = document.getElementById("btn1");
+        var btn = document.getElementById("btn2");
+        var btn = document.getElementById("btn3");
+        var btn = document.getElementById("btn4");
+        var btn = document.getElementById("btn5");
+
+
+        btn1.onclick = function () {
+
+            slide.style.transform = "translateY(0px)";
+            slidetext.style.transform = "translateX(0px)";
+            btn1.classList.add("active");
+            btn2.classList.remove("active");
+            btn3.classList.remove("active");
+            btn4.classList.remove("active");
+            btn5.classList.remove("active");
+
+        }
+        btn2.onclick = function () {
+            slide.style.transform = "translateY(-100vh)";
+            slidetext.style.transform = "translateX(-600px)";
+            btn2.classList.add("active");
+            btn1.classList.remove("active");
+            btn3.classList.remove("active");
+            btn4.classList.remove("active");
+            btn5.classList.remove("active");
+        }
+        btn3.onclick = function () {
+
+            slide.style.transform = "translateY(-200vh)";
+            slidetext.style.transform = "translateX(-1200px)";
+            btn3.classList.add("active");
+            btn2.classList.remove("active");
+            btn1.classList.remove("active");
+            btn4.classList.remove("active");
+            btn5.classList.remove("active");
+
+        }
+        btn4.onclick = function () {
+
+            slide.style.transform = "translateY(-300vh)";
+            slidetext.style.transform = "translateX(-1800px)";
+            btn4.classList.add("active");
+            btn2.classList.remove("active");
+            btn3.classList.remove("active");
+            btn1.classList.remove("active");
+            btn5.classList.remove("active");
+
+        }
+        btn5.onclick = function () {
+
+            slide.style.transform = "translatey(-400vh)";
+            slidetext.style.transform = "translateX(-2400px)";
+
+            btn1.classList.remove("active");
+            btn2.classList.remove("active");
+            btn3.classList.remove("active");
+            btn4.classList.remove("active");
+            btn5.classList.add("active");
+
+        }
+    </script>
+</body>
+
+</html>

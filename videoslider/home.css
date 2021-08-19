@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    flex-wrap: wrap;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+nav{
+    display: flex;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height:100px ;
+    transform: translateY(-80px);
+    z-index: 500;
+}
+nav h1 a{
+    margin: 0 150px;
+    font-size: 80px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: black;
+}
+nav ul {
+    list-style: none;
+    float: right;
+    margin-top: 40px;
+    left: 200px;
+    
+}
+nav ul li {
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 0 30px;
+    display: inline-block;
+}
+nav ul li a{
+    font-size: 30px;
+    color: black;
+}
+ li a:hover,a.active{
+    color: red;
+}
+.check-btn{
+    display: flex;
+    position: absolute;
+    font-size: 30px;
+    left: 50px;
+    line-height: 80px;
+  
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+#text div h2{
+    width:fit-content;
+    font-size: 4rem;
+    border-bottom: 2px solid white;
+    margin-left:10px;
+    padding: 0;
+    z-index: 4;
+}
+#text div p{
+    display: flex;
+    font-size: 1.3em;
+    padding-left:30px ;
+}
+
+#text{
+    position: relative;
+    background-color: rgba(255, 255, 255,0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 10px 0 15px rgb(0, 0,0,0,0.5);
+    left: 20px;
+    right: 50px;
+    width: 800px;
+    height: 500px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+#slidetext {
+    display: inline-flex;
+    transition: 0.3s;
+   
+}
+#slidetext div{
+    width:400px;
+    margin-top: 180px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: grid;
+    gap: 10px;
+}
+
+.sci{
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    display: fixed;
+    flex-direction:column;   
+
+}
+.sci li{
+    list-style: none;
+}
+.sci li a{
+    text-decoration: none;
+    width: 60px;
+    min-height: fit-content;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.sci li a img:hover{
+    border: 3px solid #cc2323;
+}
+.sci li img{
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+}
+
+section{
+    margin-top:100px ;
+    height: 100vh;  
+    width: 100%;  
+    overflow: hidden;
+}
+section .video{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    position:fixed;
+
+
+}
+section .video video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+
+}
+
+#slider{
+    transition: 0.5s;
+   }
+.indicator{
+    position: fixed;
+    margin-top: 200px;
+    left: 50%;
+    bottom: 80px;
+    transform: translateX(-50%);
+}
+.indicator span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(128, 133, 133);
+    cursor: pointer;
+}
+.indicator .active{
+    background-color: rgb(255, 255, 255) !important;
+}
+
+@media(max-width:50%){
+    #text{
+        width:50%;
+        height: 300px;
+        top: 250px;
+        bottom: 10px;
+    }
+   
+}
+
+
+@media(max-width:1050px){
+    
+  
+   .check-btn{
+       display: block;
+   }
+   nav ul{
+       position: absolute;
+       display: flex;
+       width: min-content;
+       height: 350px;
+       background-color: rgba(255, 255, 255,0.1);
+       backdrop-filter: blur(5px);
+       box-shadow: 10px 0 15px rgb(0, 0,0,0,0.5);
+       top: 30px;
+       flex-wrap: wrap;
+       text-align: center;
+       transition: all 0.5s;
+       opacity: 0;
+       transform: translateX(-180px);
+   }
+   nav ul li{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+      padding: 5px;
+     
+   }
+   nav ul li a{
+       font-size: 30px;
+       color: black;
+       text-decoration: none;
+     
+   }
+   nav ul li a:hover,,a.active{
+       color: red;
+   }
+   #check:checked~ul{
+     opacity: 1;
+   }
+    #text{
+        width:75%;
+        height: 300px;
+        top: 150px;
+        bottom: 10px;
+    }
+    #slidetext div{
+        margin-top: 20px;
+        margin-left: 10px;
+
+    }
+   
+    .sci li a{
+        width:40px;
+        height: 40px;
+
+    }
+    .control li{
+        width: 40px;
+        height: 40px;
+    }
+}
